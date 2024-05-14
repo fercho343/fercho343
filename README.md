@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# Hello, I'm Fernando Lopez! 👋
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About Me
+I'm a Full Stack developer specializing in web and mobile applications. My passion for programming has led me to work with a variety of technologies, including:
 
-Currently, two official plugins are available:
+- TypeScript
+- JavaScript
+- Python
+- React.js
+- React Native
+- Django
+- FastAPI
+- Swift
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I'm always looking to learn something new and improve my skills.
 
-## Expanding the ESLint configuration
+## What I'm Currently Studying
+I'm currently expanding my knowledge and skills in the following languages and technologies:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Go
+- C#
+- Kotlin
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Additional Interests
+Outside of the programming world, I have two major passions:
+- 3D Modeling: I love creating 3D models and exploring the world of 3D visualization.
+- Photography: Photography is another one of my passions. Capturing special moments and creating visual art is something I greatly enjoy.
