@@ -15,11 +15,13 @@ type ThemeType = "light" | "dark";
 interface ThemeContextType {
 	theme: ThemeType;
 	handleChangeTheme: () => void;
+	textDirrection: "ltr" | "rtl";
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
 	theme: "light",
 	handleChangeTheme: () => {},
+	textDirrection: "ltr",
 });
 
 export function useTheme() {
@@ -28,28 +30,19 @@ export function useTheme() {
 
 export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
 	const [theme, setTheme] = useState<ThemeType>("light");
+	const textDirrection: "ltr" | "rtl" = "ltr";
 
 	useEffect(() => {
 		const localTheme = localStorage.getItem("theme");
-		const darkModeMediaQuery = window.matchMedia(
+		const prefersDarkMode = window.matchMedia(
 			"(prefers-color-scheme: dark)",
 		).matches;
 
-		if (localTheme === null) {
-			if (darkModeMediaQuery) {
-				setTheme("dark");
-				localStorage.setItem("theme", "dark");
-			} else {
-				setTheme("light");
-				localStorage.setItem("theme", "light");
-			}
-		} else {
-			if (localTheme === "light") {
-				setTheme("light");
-			} else {
-				setTheme("dark");
-			}
-		}
+		//@ts-ignore
+		const themeToSet: ThemeType =
+			localTheme || (prefersDarkMode ? "dark" : "light");
+		setTheme(themeToSet);
+		localStorage.setItem("theme", themeToSet);
 	}, []);
 
 	const handleChangeTheme = () => {
@@ -66,7 +59,9 @@ export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
 	return (
 		<StyledProvider theme={theme === "light" ? lightTheme : darkTheme}>
-			<ThemeContext.Provider value={{ theme, handleChangeTheme }}>
+			<ThemeContext.Provider
+				value={{ theme, handleChangeTheme, textDirrection }}
+			>
 				{children}
 			</ThemeContext.Provider>
 		</StyledProvider>

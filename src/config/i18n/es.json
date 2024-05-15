@@ -1,6 +1,10 @@
 {
-  "aboutMe": "Sobre mi",
+  "aPasionate": "Apasionado",
+  "aboutMe": "Acerca de mí",
+  "experience": "con 6 años de experiencia en el desarrollo de aplicaciones web y móviles fáciles de usar",
+  "fullStack": "<Full Stack Web and Mobile developer />",
   "home": "Inicio",
+  "home1": "Hola, soy",
   "skills": "Habilidades",
   "works": "Trabajos"
 }

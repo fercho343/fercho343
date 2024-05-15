@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
 import Img from "../../../assets/img/profile.png";
 import {
@@ -18,12 +19,12 @@ export const Home = () => {
 	return (
 		<Body>
 			<InformationContent>
-				<Subtitle>Hi I'm</Subtitle>
-				<Title>Fernando Lopez</Title>
+				<Subtitle>{t("home1")}</Subtitle>
+				<Title>Fernando López</Title>
 
 				<Information>
-					A pasionate <Span>{"<Full Stack Web and Mobile developer />"}</Span>{" "}
-					width 6 years experience creating user frendly web and mobile apps
+					{t("aPasionate")}
+					<Span> {t("fullStack")}</Span> {t("experience")}
 				</Information>
 			</InformationContent>
 
