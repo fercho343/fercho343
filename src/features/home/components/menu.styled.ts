@@ -31,6 +31,7 @@ export const ItemOptions = styled.p`
     &:hover{
         color: ${({ theme }) => theme.colors.secondary};
         text-decoration: underline;
+        transition: ease-in-out 0.2s;
     }
 
 `;

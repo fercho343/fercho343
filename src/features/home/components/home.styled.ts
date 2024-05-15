@@ -6,6 +6,7 @@ export const Body = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: ${({ theme }) => theme.colors.text};
 `;
 
 export const InformationContent = styled.div`
@@ -69,8 +70,8 @@ export const SocialIcon = styled.a`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.text};
-    color: #fff;
+    background-color: #333;
+    color: '#fff';
     display: flex;
     align-items: center;
     justify-content: center;
