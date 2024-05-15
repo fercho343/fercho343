@@ -2,20 +2,34 @@ import styled from "styled-components";
 
 export const Body = styled.div`
     width: '100%';
-    margin-top: 180px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: ${({ theme }) => theme.colors.text};
+    flex-direction: column-reverse;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        margin-top: 180px;
+    }
 `;
 
 export const InformationContent = styled.div`
-    width: 45%;
+    width: 100%;
+    margin-top: 40px;
+    @media screen and (min-width: 768px) {
+        width: 45%;
+        margin-top: 0px;
+    }
 `;
 
 export const Title = styled.h1`
     font-family: 'Fira code';
-    font-size: 40px;
+    font-size: 35px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 40px;
+    }
 `;
 
 export const Subtitle = styled.h2`
@@ -35,9 +49,13 @@ export const Span = styled.span`
 `;
 
 export const ProfileContent = styled.div`
-    width: 45%;
     display: flex;
     justify-content: center;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: 45%;
+        margin-top: 0px;
+    }
 `;
 
 export const AvatarContainer = styled.div`
