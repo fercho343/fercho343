@@ -12,7 +12,7 @@ import {
 } from "./menu.styled";
 
 export const Menu = () => {
-	const { theme, setTheme } = useTheme();
+	const { theme, handleChangeTheme } = useTheme();
 
 	return (
 		<Bar>
@@ -25,12 +25,8 @@ export const Menu = () => {
 			</Options>
 			<Config>
 				<p>Es</p>
-				<ThemeIcon>
-					{theme === "light" ? (
-						<MoonIcon onClick={() => setTheme("dark")} />
-					) : (
-						<SunIcon onClick={() => setTheme("light")} />
-					)}
+				<ThemeIcon onClick={handleChangeTheme}>
+					{theme === "light" ? <MoonIcon /> : <SunIcon />}
 				</ThemeIcon>
 			</Config>
 		</Bar>
